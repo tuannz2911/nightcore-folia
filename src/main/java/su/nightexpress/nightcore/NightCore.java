@@ -22,6 +22,7 @@ public class NightCore extends NightPlugin implements ImprovedCommands {
 
     private final Set<NightPlugin> childrens;
     private final CoreManager      coreManager;
+    private static TaskScheduler scheduler;
 
     public NightCore() {
         Plugins.load(this);
