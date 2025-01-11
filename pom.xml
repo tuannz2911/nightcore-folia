@@ -111,7 +111,6 @@
             <version>2.2.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-    </dependencies>
 
         <dependency>
             <groupId>com.github.Anon8281</groupId>
