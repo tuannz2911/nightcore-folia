@@ -63,6 +63,10 @@ public class NightCore extends NightPlugin implements ImprovedCommands {
         LangAssets.shutdown();
     }
 
+    public static TaskScheduler getScheduler() {
+        return scheduler;
+    }
+    
     private void loadCommands() {
         CoreCommands.load(this);
     }
