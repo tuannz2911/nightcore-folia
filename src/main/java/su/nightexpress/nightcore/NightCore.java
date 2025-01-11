@@ -1,7 +1,6 @@
 package su.nightexpress.nightcore;
 
 import org.jetbrains.annotations.NotNull;
-import com.github.Anon8281.universalScheduler.foliaScheduler.FoliaScheduler;
 import su.nightexpress.nightcore.command.experimental.ImprovedCommands;
 import su.nightexpress.nightcore.config.PluginDetails;
 import su.nightexpress.nightcore.core.CoreConfig;
@@ -23,7 +22,6 @@ public class NightCore extends NightPlugin implements ImprovedCommands {
 
     private final Set<NightPlugin> childrens;
     private final CoreManager      coreManager;
-    private static TaskScheduler scheduler;
 
     public NightCore() {
         Plugins.load(this);
@@ -62,10 +60,6 @@ public class NightCore extends NightPlugin implements ImprovedCommands {
         }
         PlayerBlockTracker.shutdown();
         LangAssets.shutdown();
-    }
-
-    public static TaskScheduler getScheduler() {
-        return scheduler;
     }
     
     private void loadCommands() {
