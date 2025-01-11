@@ -1,5 +1,7 @@
 package su.nightexpress.nightcore;
 
+
+import com.github.Anon8281.universalScheduler.foliaScheduler.FoliaScheduler;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.scheduler.BukkitScheduler;
@@ -79,8 +81,8 @@ public interface NightCorePlugin extends Plugin {
     @NotNull CommandManager getCommandManager();
 
     @NotNull
-    default BukkitScheduler getScheduler() {
-        return this.getServer().getScheduler();
+    default FoliaScheduler getScheduler() {
+        return new FoliaScheduler(this);
     }
 
     @NotNull
