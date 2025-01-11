@@ -43,6 +43,7 @@ public class NightCore extends NightPlugin implements ImprovedCommands {
 
     @Override
     public void enable() {
+        scheduler = UniversalScheduler.getScheduler(this);
         Tags.loadColorsFromFile(this);
         LangAssets.load(this);
         this.loadIntegrations();
